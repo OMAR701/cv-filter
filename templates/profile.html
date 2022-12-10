@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Select Profile{% endblock %}
+
+{% block nav %}
+{% endblock %}
+
+{% block style %}
+<style>
+
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="bg3">
+	<h1 class="projecttitle">Resume Screening and Ranking using ML</h1>
+	<div class="profile">
+		<h2 id="heading">Select who you are :</h2>
+	<div>
+		<form method="post">
+			<center>
+			<input type="submit" value="Applicant" onclick="javascript: form.action='/profile?profile=applicant';">
+			<input type="submit" value="Employer" onclick="javascript: form.action='/profile?profile=employer';">
+            </center>		
+		</form>
+	</div>
+</div>
+{% endblock %}

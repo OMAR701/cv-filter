@@ -1,0 +1,214 @@
+.employer{
+    width: 100%;
+    padding-right:100px;
+    padding-left: 100px;
+    padding-top:40px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+.emp_banner{
+    padding: 80px 26px 80px 26px;
+    background: #F2F6FD;
+    border-radius: 16px;
+    position: relative;
+}
+
+.emp_banner ::before{
+    content: "";
+    position: absolute;
+    bottom: 1px;
+    left: -1px;
+    height: 170px;
+    width: 218px;
+    padding-left: 40px;
+    background: url("../images/left-job-head.svg") no-repeat left bottom;
+    background-size: contain;
+    display: inline;
+    top: auto;
+    right: auto;
+}
+
+.emp_banner ::after{
+    content: "";
+    position: absolute;
+    bottom: 1px;
+    right: 5px;
+    height: 170px;
+    width: 213px;
+    background: url("../images/right-job-head.svg") no-repeat left bottom;
+    background-size: contain;
+}
+
+.emp_search{
+    padding: 0px 0px 0px 0px;
+    max-width: 850px;
+    margin: auto;
+}
+
+.emp_search > .emp_search_text{
+    font-family: "Nunito", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: none;
+}
+
+.emp_search_text > h3{
+    margin: 0;
+    padding: 0;
+    font-size: 26px;
+    line-height: 42px;
+}
+
+.emp_search_text > h3 > strong {
+    font-weight: 600;
+    color: #333;
+}
+
+.emp_search_text > h3 > span {
+    font-size: 22px;
+    font-weight: 300;
+    color: #777;
+    line-height: 42px;
+}
+
+.emp_search_form{
+    background: transparent;
+    border-radius: 8px;
+    display: inline-block;
+    width: 100%;
+    padding: 10px 10px;
+    margin-top:20px
+}
+
+.emp_form{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+
+}
+
+.emp_search-box{
+    width: 80%;
+    display: flex;
+    border-radius:8px;
+    align-items: center;
+    background-color: #fff;
+    justify-content:space-between
+}
+
+.form-input-value{
+    padding: 10px 20px 10px 20px;
+    width: 70%;
+    display: flex;
+    border-radius: 5px;
+    background-color: #fff;
+    align-items: center;
+    
+}
+
+.form-input-value > h2{
+    font-size:16px;
+    margin-bottom: 0px;
+    color: #d6d5d5;
+
+}
+
+.choose{
+    border: 0px solid rgba(26, 15, 9, 0.1);
+    border-radius: 0px;
+    padding: 5px 10px 5px 10px;
+    display: inline-block;  
+    width: 100%;
+}
+
+.choose:focus{
+    outline: none;
+}
+
+input[type="text"]:focus{
+    background-color:transparent !important;
+}
+
+.choose ::selection{
+    background: #05264E;
+    color: #fff;
+}
+.form-submit-btn{
+    width: 18%;
+    display: flex;
+    align-items: center;
+    background-color: #5987face;
+    padding: 10px 10px 10px 20px;
+    margin-right: 8px;
+    border-radius:8px;
+    color: #fff;
+}
+
+.search{
+    border: 0px solid rgba(26, 15, 9, 0.1);
+    border-radius: 0px;
+    display: inline-block;  
+    width: 80%;
+    color: #fff;
+    background-color:transparent;
+}
+
+
+.emp_form > .category > label {
+    width: 120px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size:14px;
+    border-radius: 5px;
+    background-color:#6990f2ce;
+    padding: 3px;
+    color: #fff
+}
+
+.record{
+    width:100%;
+    padding: 30px 10px 10px 10px;
+    display: flex;
+    align-items: center;
+    justify-content:center
+}
+
+.record > table{
+        width:100%;
+        table-layout: fixed;
+}
+
+.record > .table_content{
+    height:300px;
+  overflow-x:auto;
+  margin-top: 0px;
+}
+
+
+table, td, th {  
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+  }
+  
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+th, td {
+    padding: 15px;
+  }
+
+thead{
+    background-color:#89a7f4b3;
+    color: #fff;
+}
+
+td > .view_data{
+    width: 100px;
+    padding:5px;
+    border: none;
+    border-radius:5px;
+    background-color:#6990f2ce;
+    color: #fff
+}

@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}Resume Screening{% endblock %}
+
+{% block nav %}
+{% endblock %}
+
+{% block style %}
+<style>
+
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="banner">
+	{% with messages = get_flashed_messages() %}
+  		{% if messages %}
+    		<ul class=flashes>
+    		{% for message in messages %}
+      			<li>{{ message }}</li>
+    		{% endfor %}
+    		</ul>
+  		{% endif %}
+	{% endwith %}
+	<div class="index_log">
+		<h2>Get Started in few easy steps</h2>
+		<a href="/email-login" class="email-btn"><i class="fa fa-envelope"></i><span class="space"/>Login using Email</a>
+		<br>
+		<p>Do not have an account ? </p>
+		<a href="/email-signup" class="signup-btn"><i class="fas fa-user-plus"></i><span class="space"/>SignUp</a>
+	</div>
+
+</div>
+{% endblock %}

@@ -1,0 +1,115 @@
+.post_job_con{
+  padding:50px;
+  width: 100%;height: auto;
+  font-family: 'Nunito', sans-serif;
+  background-color: rgb(255 255 255 / 69%); 
+  
+}
+
+.post_alignment_con{
+  box-shadow: 0 0 30px rgb(0, 0, 0, 0.15);
+}
+
+.post_job_button{
+  position: relative;
+  transform: none;
+  top: 0;
+  margin: 5px 0 40px -2px;
+  opacity: 1;
+  border: none;
+  padding: 5px;
+  margin-bottom: 30px;
+  right: auto;
+  display: inline-block;
+  box-shadow: none;
+  color: #fff;
+  width: 10%;
+  background-color: #bbb95e ;
+  box-shadow: none;
+  border-radius: 5px;
+}
+
+.post_job_button:hover{
+  background-color: #9e9c4e ;
+}
+
+.post_card_container {
+  display: grid;
+    grid-gap: 0rem;
+}
+
+.post_card {  
+  border-bottom: 1px solid #e4e4e4;
+  line-height: 20px;
+  padding: 22px 30px;
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 50%;
+  flex-flow: row-wrap;
+  transition: 0.3s;
+} 
+
+.post_card_content{
+  padding: 40px 40px 0;
+}
+
+.post_card_content > h3{
+  color: black;
+  font-weight: 400;
+}
+
+.post_card_com{
+  font-size: 16px;
+  color: #333;
+  font-weight:400;
+  line-height: 40px;
+}
+
+.post_card_content > .post_card_ds{ 
+  display: flex;
+  margin: 20px 0 10px;
+  margin-right: 40px;
+}
+
+.post_card_content > .post_card_ds > p{
+  margin-bottom: 5px;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #818189;
+}
+
+.post_card_buttons > .view_candidates{
+    position: relative;
+    transform: none;
+    top: 0;
+    margin: 5px 0 10px -2px;
+    opacity: 1;
+    border: none;
+    padding:4px;
+    right: auto;
+    display: inline-block;
+    box-shadow: none;
+    color: #fff;
+    width: 30%;
+    background-color: #57aa6c ;
+    box-shadow: none;
+    border-radius:  4px;
+}
+
+.post_card_buttons > .view_candidates:hover {
+    background-color: #4a935d ;
+}
+
+.table > .card_view_details {
+  border: 0;
+  background-color: #acc1f7;
+  color: white;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.table > .card_view_details:hover {
+  background-color: #899ac6;
+}

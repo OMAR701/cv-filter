@@ -1,0 +1,122 @@
+{% extends "base.html" %}
+
+{% block title %}Employer Dashboard{% endblock %}
+
+{% block nav %}
+<span><a href="/employer/post_job">Post Job</a></span>
+{% endblock %}
+
+{% block content %}
+<div class="employer">
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>  
+    <script>var $j = jQuery.noConflict();</script>
+	<div class="emp_banner">
+		<div>{{errorMsg}}</div>
+		<div class="emp_search">
+			<div class="emp_search_text">
+				<h3>
+					<strong>Hire experts for any job, any time.</strong> <br/>
+					<span>Thousands of small businesses turn their ideas into reality.</span></h3>
+			</div>
+			<div class="emp_search_form">
+                <form action="/employer/empSearch" method="POST" class="emp_form">
+					<div class="category">
+						<label for="category">Enter Category</label>
+					</div>
+					<div class="emp_search-box">
+						<div class="form-input-value">
+							<h2><i class="fa fa-th"></i></h2>
+							<input type="text" class="choose" name="category" id="category" placeholder="Your Keyword...">
+						</div>
+						
+						<div class="form-submit-btn">
+							<i class="fa fa-search"></i> 
+							<input type="submit" class="search" name="submit" value="Search">
+						</div>
+					</div>
+				</form>
+			</div>
+			
+		</div>
+	</div>
+	
+	<div class="record">
+		<table>
+			<thead>
+				<tr class="table_row">
+					<th>No</th>
+					<th>Name</th>
+					<th>Email</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+            <tbody>
+			  {% for i in range(0, data|length) %}
+				<tr>
+					<td>{{ (i+1) }}</td>
+					<td>{{ data[i]['name'] }}</td>
+					<td>{{ data[i]['email'] }}</td>
+					<td><input type="button" name="view" value="View" id="{{data[i]['_id']}}" data-bs-toggle="modal" data-bs-target="#viewdetails"  class="view_data"/></td>
+				</tr>
+			  {% endfor %}
+		   </tbody>
+	    </table>
+	</div>
+			
+		
+	
+	<div class="modal fade" id="viewdetails" tabindex="-1" role="dialog" aria-labelledby="viewdetails" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3 class="modal-title" id="exampleModalLongTitle">Details of Candidate:</h3>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<table>
+						<tr> 
+							<td><label>Name:</label></td>   
+							<td><input type="text" class="form-control-plaintext" readonly  id="view_name"></td> 
+						</tr>
+						<tr> 
+							<td><label>Email:</label></td>   
+							<td><input type="text" class="form-control-plaintext" readonly id="view_email"></td>
+						</tr>
+						<tr> 
+							<td><label>Mobile No.:</label></td>  
+							<td><input type="text" class="form-control-plaintext" readonly id="view_mobile"></td> 
+						</tr>
+						<tr> 
+							<td><label>Skills:</label></td>  
+							<td><textarea rows="3" cols="70" class="form-control-plaintext" readonly id="view_skills" ></textarea></td>
+						</tr>
+						<tr> 
+							<td><label>Education:</label></td>   
+							<td><input type="text" class="form-control-plaintext" readonly  id="view_education"> </td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		$(document).on('click', '.view_data', function() {
+			var employee_id = $(this).attr('id');
+			$j.ajax({
+				url: '/employer/viewDetails',
+				method: 'POST',
+				data: ({ employee_id : employee_id }),
+				success: function(data) {
+					console.log(data);
+					$('#view_name').val(data.name);
+					$('#view_email').val(data.email);
+        			$('#view_mobile').val(data.mobile_number);
+        			$('#view_skills').val(data.skills);
+        			$('#view_education').val(data.education);
+				}
+			})
+		})
+	</script>
+</div>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}SignUp{% endblock %}
+
+{% block nav %}
+{% endblock %}
+
+{% block style %}
+<style>
+
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="bg1">
+	<h1 class="pro1">Resume Screening and Ranking using ML</h1>
+    <div class="signup-page">
+		<h2>Sign Up</h2>
+		<form action="/email-signup" method="POST">
+			<label for="name">Name :</label>
+			<input type="text" name="name" id="name">
+			<br>
+			<label for="emai">Email :</label>
+			<input type="email" name="email" id="email">
+			<br>
+			<label for="password1">Password :</label>
+			<input type="password" name="password1" id="password1">
+			<br>
+			<label for="password2">Confirm Password :</label>
+			<input type="password" name="password2" id="password2">
+			<br>
+			<button type="submit" value="SignUp">Sign Up</button>
+		</form>
+	</div>
+</div>
+{% endblock %}

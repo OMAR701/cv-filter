@@ -1,0 +1,78 @@
+.banner{
+    background-image: url("https://images.pexels.com/photos/590016/pexels-photo-590016.jpeg?cs=srgb&dl=pexels-lukas-590016.jpg&fm=jpg");
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size:cover;
+}
+
+.index_log{
+    min-height: 300px;
+    min-width: 400px;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.75);
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    font-family: 'Josefin Sans', sans-serif;
+    border-radius: 10px;
+}
+
+.index_log > h2 {
+    font-size:35px;
+    padding-bottom:20px
+}
+
+.index_log > a{
+    text-decoration:none;
+    color: #fff;
+    font-size: 17px;
+}
+
+.email-btn{
+    padding: 20px;
+    width: 300px;
+    height: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius:10px;
+    background-color: #0489c9;
+}
+
+.google-btn{
+    padding: 20px;
+    width: 300px;
+    height: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius:10px;
+    background-color: #d62d20
+}
+
+.signup-btn{
+    padding: 20px;
+    width: 300px;
+    height: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius:10px;
+    background-color: #f26622;
+}
+
+.space{
+    padding: 10px;
+}
+
+.space1{
+    padding-left: 7px;
+}
+

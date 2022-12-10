@@ -1,0 +1,59 @@
+body::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+}
+.mainContainer{
+    height: 75px;
+    width: 100vw;
+    background-color:rgb(91, 199, 213);
+    display: flex;
+    align-items: center;
+}
+
+.mainContainer > nav{
+    height:50%;
+    width: 100%;
+    /* background-color:pink; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+nav > span{
+    width: 40%;
+    /* background-color:blanchedalmond; */
+    height: 100%;
+    display: flex;
+    font-size: 25px;
+    font-weight: 900;
+    align-items: center;
+    color: #fff
+}
+
+.link{
+    width: 50%;
+    height: 100%;
+    /* background-color:orange; */
+    display: flex;
+    justify-content: right;
+}
+
+
+.link > span{
+    width: 100px; 
+    height:100%;
+    /* background-color:yellow; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size:17px;
+    margin-right: 20px;
+    padding: 10px;
+}
+span > a{
+    text-decoration: none;
+    cursor: pointer;
+    color:white;
+}
+
+
+
